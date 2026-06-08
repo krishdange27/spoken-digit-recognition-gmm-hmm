@@ -1,15 +1,35 @@
 # Spoken Digit Recognition using GMM and HMM
 
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Status](https://img.shields.io/badge/Status-Completed-green)
+![ML](https://img.shields.io/badge/Machine%20Learning-From%20Scratch-orange)
+
 ## Overview
 
 This project implements a spoken digit recognition system for digits 0–9 using MFCC audio features and probabilistic machine learning models implemented from scratch.
 
 The objective is to train on recordings from speakers 1–5 and evaluate performance on an unseen speaker (speaker 6), testing the model's ability to generalize.
 
-Two approaches were implemented:
+Two probabilistic models were implemented completely from scratch:
 
 * Gaussian Mixture Model (GMM)
 * Hidden Markov Model (HMM)
+
+No machine learning libraries were used for model training; only feature extraction was performed using Librosa.
+
+## Highlights
+
+- Implemented GMM (EM algorithm) from scratch
+- Implemented HMM (Baum-Welch algorithm) from scratch
+- Extracted MFCC speech features using Librosa
+- Compared models using validation accuracy, test accuracy, confusion matrices, and per-digit performance
+- Built an inference pipeline for predicting digits from new audio recordings
+
+## Report
+
+A detailed analysis of the implementation, experiments, tuning process, and results is available in:
+
+`Report.pdf`
 
 ## Feature Extraction
 
@@ -40,10 +60,11 @@ MFCCs capture the spectral characteristics of speech and provide a compact repre
 
 ## Key Insights
 
-* GMM achieved higher validation accuracy but significantly lower test accuracy, indicating overfitting.
-* HMM generalized much better to unseen speakers.
-* Temporal modeling is crucial for speech recognition tasks.
-* Digit 6 remained challenging for both models due to acoustic similarity with other digits.
+* GMM achieved higher validation accuracy but lower test accuracy, indicating overfitting.
+* HMM generalized significantly better to unseen speakers and achieved the highest test accuracy.
+* Temporal modeling proved essential for speech recognition, explaining HMM's superior performance.
+* Digits such as 6 and 9 were consistently challenging due to acoustic similarities with other digits.
+* Overall, HMM was the more suitable model for speaker-independent digit recognition.
 
 ## Visual Results
 
@@ -113,9 +134,9 @@ python inference.py
 ## Repository Structure
 
 ```text
-src/        -> model implementations
-results/    -> generated plots
-train_test.py
-inference.py
-Report.pdf
+src/                 # model implementations
+results/             # generated plots and figures
+train_test.py        # training and evaluation pipeline
+inference.py         # digit prediction for new audio files
+Report.pdf           # detailed project report
 ```

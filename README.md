@@ -3,6 +3,8 @@
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![Status](https://img.shields.io/badge/Status-Completed-green)
 ![ML](https://img.shields.io/badge/Machine%20Learning-From%20Scratch-orange)
+![Speech Recognition](https://img.shields.io/badge/Speech-Recognition-purple)
+
 
 ## Overview
 

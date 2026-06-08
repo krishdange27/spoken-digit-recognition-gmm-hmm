@@ -31,7 +31,7 @@ No machine learning libraries were used for model training; only feature extract
 
 A detailed analysis of the implementation, experiments, tuning process, and results is available in:
 
-`Report.pdf`
+[📄 Project Report](Report.pdf)
 
 ## Feature Extraction
 

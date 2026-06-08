@@ -29,9 +29,9 @@ No machine learning libraries were used for model training; only feature extract
 
 ## Report
 
-A detailed analysis of the implementation, experiments, tuning process, and results is available in:
+[![Report](https://img.shields.io/badge/View-Full%20Report-red)](Report.pdf)
 
-[📄 Project Report](Report.pdf)
+A detailed analysis of the implementation, tuning experiments, evaluation metrics, confusion matrices, and final conclusions.
 
 ## Feature Extraction
 
